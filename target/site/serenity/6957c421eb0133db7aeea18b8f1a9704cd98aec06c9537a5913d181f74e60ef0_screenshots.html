@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Practica Sophos</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="4868905937608a7c35f61d3fb12a475744e21d1736ec298286bf931bd74e3b71.html">Registrar Cliente</a></span>
+                > <span class="truncate-60"><a
+                    href="6957c421eb0133db7aeea18b8f1a9704cd98aec06c9537a5913d181f74e60ef0.html">Registrar cliente exitosamente </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 17-05-2024 14:46</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Registrar Cliente </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                &quot;Como estudiante quiero registrar clientes en la tabla para pasar el taller de sophos&quot;
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="ae338a80c80a42ee69ebda97bbe6279bae9e752f9eec8aae9d0d50f707d91efc.html">Registrar
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Registrar cliente exitosamente
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given que me encuentro en "https://demoqa.com/"<br>When registro al cliente en la tabla<br><table class='embedded'><thead><th>firstName</th><th>lastName</th><th>email</th><th>age</th><th>salary</th><th>department</th></thead><tbody><tr><td>&lt;firstName&gt;</td><td>&lt;lastName&gt;</td><td>&lt;email&gt;</td><td>&lt;age&gt;</td><td>&lt;salary&gt;</td><td>&lt;department&gt;</td></tr></tbody></table><br>Then el cliente es registrado en la tabla</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="2eb41ffbc9a9458962cbc58117ed29d1ea5bf93c526bb7203efd3581dbd48bcf.png" title=" 1: Registrar cliente exitosamente ({firstName=Roger, lastName=Fernwy, email=rf.m@gmail.com, age=24, salary=1000000, department=Legal})" width="2560"/>
+                <img src="2eb41ffbc9a9458962cbc58117ed29d1ea5bf93c526bb7203efd3581dbd48bcf.png" title=" Given que me encuentro en &quot;https://demoqa.com/&quot;" width="2560"/>
+                <img src="2eb41ffbc9a9458962cbc58117ed29d1ea5bf93c526bb7203efd3581dbd48bcf.png" title=" Yeison opens the https://demoqa.com/" width="2560"/>
+                <img src="2eb41ffbc9a9458962cbc58117ed29d1ea5bf93c526bb7203efd3581dbd48bcf.png" title=" Given que me encuentro en &quot;https://demoqa.com/&quot; (completed)" width="2560"/>
+                <img src="2eb41ffbc9a9458962cbc58117ed29d1ea5bf93c526bb7203efd3581dbd48bcf.png" title=" When registro al cliente en la tabla
+| firstName | lastName | email | age | salary | department |
+| Roger | Fernwy | rf.m@gmail.com | 24 | 1000000 | Legal |" width="2560"/>
+                <img src="2eb41ffbc9a9458962cbc58117ed29d1ea5bf93c526bb7203efd3581dbd48bcf.png" title=" Navega hacia la pagina de interaccion" width="2560"/>
+                <img src="2eb41ffbc9a9458962cbc58117ed29d1ea5bf93c526bb7203efd3581dbd48bcf.png" title=" Yeison clicks on Elements" width="2560"/>
+                <img src="e54bc64ea382a52aa59561a52a71327b858eb3840693478b8096ddc9bd891a77.png" title=" Yeison clicks on Elements (completed)" width="2560"/>
+                <img src="445ef5a2f4c77db5f0bef9f154607b1e8a81b47d8818007d0677fe14e5c51e74.png" title=" Yeison clicks on Web Tables" width="2560"/>
+                <img src="bcc29fb337093896a9b22cc002ab45b0925537c68733ee96bec80b11cfd081d2.png" title=" Yeison clicks on Web Tables (completed)" width="2560"/>
+                <img src="bcc29fb337093896a9b22cc002ab45b0925537c68733ee96bec80b11cfd081d2.png" title=" Navega hacia la pagina de interaccion (completed)" width="2560"/>
+                <img src="bcc29fb337093896a9b22cc002ab45b0925537c68733ee96bec80b11cfd081d2.png" title=" Agrega al cliente a la tabla" width="2560"/>
+                <img src="abe770521789377e8d748e94feaafc1797fb94f7b78d1f952bc1a43b2cd854db.png" title=" Yeison clicks on Button add en Web Tables" width="2560"/>
+                <img src="c76336300db3a25ce3887e7f04d117de1ab9aa07cfaad9de98a8f77dab91481c.png" title=" Yeison clicks on Button add en Web Tables (completed)" width="2560"/>
+                <img src="cbe7219080338d1905d882af6203fb24e1eed8e1ca798ca9a45620ade6b5d5bb.png" title=" Yeison enters 'Roger' into input firstname del formulario" width="2560"/>
+                <img src="4bed4102dae1dc61572c0ffc167d8b0cc5dadceedd69c596503deba6b8cb1e9f.png" title=" Yeison enters 'Roger' into input firstname del formulario (completed)" width="2560"/>
+                <img src="4bed4102dae1dc61572c0ffc167d8b0cc5dadceedd69c596503deba6b8cb1e9f.png" title=" Yeison enters 'Fernwy' into input lastname del formulario" width="2560"/>
+                <img src="f1db502e10a11dceefd88222dbce9cc81a1c13fb359912da2e2cfd12f42534f4.png" title=" Yeison enters 'Fernwy' into input lastname del formulario (completed)" width="2560"/>
+                <img src="f1db502e10a11dceefd88222dbce9cc81a1c13fb359912da2e2cfd12f42534f4.png" title=" Yeison enters 'rf.m@gmail.com' into input emnail del formulario" width="2560"/>
+                <img src="9cc958135c37f3c8269702ce9e9dec119301ceb2d8de66548f6d731effd4b06d.png" title=" Yeison enters 'rf.m@gmail.com' into input emnail del formulario (completed)" width="2560"/>
+                <img src="9cc958135c37f3c8269702ce9e9dec119301ceb2d8de66548f6d731effd4b06d.png" title=" Yeison enters '24' into input age del formulario" width="2560"/>
+                <img src="aacc85db6d76e4abb5a226ae81c6ebf3a544c98f9c75aae534255cfe18d9509e.png" title=" Yeison enters '24' into input age del formulario (completed)" width="2560"/>
+                <img src="aacc85db6d76e4abb5a226ae81c6ebf3a544c98f9c75aae534255cfe18d9509e.png" title=" Yeison enters '1000000' into input salary del formulario" width="2560"/>
+                <img src="6ef172c7f12ef1069aac67266a7b168772db3a9307770e6a0cbe539b9a76faa2.png" title=" Yeison enters '1000000' into input salary del formulario (completed)" width="2560"/>
+                <img src="6ef172c7f12ef1069aac67266a7b168772db3a9307770e6a0cbe539b9a76faa2.png" title=" Yeison enters 'Legal' into input department del formulario" width="2560"/>
+                <img src="587d576e44c639e53f8222d81e3e049b102c4d501cc5d63d85d479778f601686.png" title=" Yeison enters 'Legal' into input department del formulario (completed)" width="2560"/>
+                <img src="587d576e44c639e53f8222d81e3e049b102c4d501cc5d63d85d479778f601686.png" title=" Yeison clicks on Button submit en Web Tables" width="2560"/>
+                <img src="cecc3820cbf256d6b2b50f0aa41f4885c546678d1ec50158a0e4f7afa8d995ad.png" title=" Yeison clicks on Button submit en Web Tables (completed)" width="2560"/>
+                <img src="cecc3820cbf256d6b2b50f0aa41f4885c546678d1ec50158a0e4f7afa8d995ad.png" title=" Agrega al cliente a la tabla (completed)" width="2560"/>
+                <img src="cecc3820cbf256d6b2b50f0aa41f4885c546678d1ec50158a0e4f7afa8d995ad.png" title=" When registro al cliente en la tabla
+| firstName | lastName | email | age | salary | department |
+| Roger | Fernwy | rf.m@gmail.com | 24 | 1000000 | Legal | (completed)" width="2560"/>
+                <img src="cecc3820cbf256d6b2b50f0aa41f4885c546678d1ec50158a0e4f7afa8d995ad.png" title=" Then el cliente es registrado en la tabla" width="2560"/>
+                <img src="fcfcf3b3c7d6aae72dd024f2eb872e4eb10a45c4fba8c4bbfab2f55d779e2eff.png" title=" Yeison should see a value that is equal to: &lt;&quot;Roger&quot;&gt;" width="2560"/>
+                <img src="fcfcf3b3c7d6aae72dd024f2eb872e4eb10a45c4fba8c4bbfab2f55d779e2eff.png" title=" Yeison should see a value that is equal to: &lt;&quot;Roger&quot;&gt; (completed)" width="2560"/>
+                <img src="fcfcf3b3c7d6aae72dd024f2eb872e4eb10a45c4fba8c4bbfab2f55d779e2eff.png" title=" Yeison should see a value that is equal to: &lt;&quot;Fernwy&quot;&gt;" width="2560"/>
+                <img src="fcfcf3b3c7d6aae72dd024f2eb872e4eb10a45c4fba8c4bbfab2f55d779e2eff.png" title=" Yeison should see a value that is equal to: &lt;&quot;Fernwy&quot;&gt; (completed)" width="2560"/>
+                <img src="fcfcf3b3c7d6aae72dd024f2eb872e4eb10a45c4fba8c4bbfab2f55d779e2eff.png" title=" Yeison should see a value that is equal to: &lt;&quot;rf.m@gmail.com&quot;&gt;" width="2560"/>
+                <img src="fcfcf3b3c7d6aae72dd024f2eb872e4eb10a45c4fba8c4bbfab2f55d779e2eff.png" title=" Yeison should see a value that is equal to: &lt;&quot;rf.m@gmail.com&quot;&gt; (completed)" width="2560"/>
+                <img src="fcfcf3b3c7d6aae72dd024f2eb872e4eb10a45c4fba8c4bbfab2f55d779e2eff.png" title=" Yeison should see a value that is equal to: &lt;&quot;24&quot;&gt;" width="2560"/>
+                <img src="fcfcf3b3c7d6aae72dd024f2eb872e4eb10a45c4fba8c4bbfab2f55d779e2eff.png" title=" Yeison should see a value that is equal to: &lt;&quot;24&quot;&gt; (completed)" width="2560"/>
+                <img src="fcfcf3b3c7d6aae72dd024f2eb872e4eb10a45c4fba8c4bbfab2f55d779e2eff.png" title=" Yeison should see a value that is equal to: &lt;&quot;1000000&quot;&gt;" width="2560"/>
+                <img src="fcfcf3b3c7d6aae72dd024f2eb872e4eb10a45c4fba8c4bbfab2f55d779e2eff.png" title=" Yeison should see a value that is equal to: &lt;&quot;1000000&quot;&gt; (completed)" width="2560"/>
+                <img src="fcfcf3b3c7d6aae72dd024f2eb872e4eb10a45c4fba8c4bbfab2f55d779e2eff.png" title=" Yeison should see a value that is equal to: &lt;&quot;Legal&quot;&gt;" width="2560"/>
+                <img src="fcfcf3b3c7d6aae72dd024f2eb872e4eb10a45c4fba8c4bbfab2f55d779e2eff.png" title=" Yeison should see a value that is equal to: &lt;&quot;Legal&quot;&gt; (completed)" width="2560"/>
+                <img src="fcfcf3b3c7d6aae72dd024f2eb872e4eb10a45c4fba8c4bbfab2f55d779e2eff.png" title=" Then el cliente es registrado en la tabla (completed)" width="2560"/>
+                <img src="fcfcf3b3c7d6aae72dd024f2eb872e4eb10a45c4fba8c4bbfab2f55d779e2eff.png" title=" 1: Registrar cliente exitosamente ({firstName=Roger, lastName=Fernwy, email=rf.m@gmail.com, age=24, salary=1000000, department=Legal}) (completed)" width="2560"/>
+                <img src="492793c32867859b1fce11430ce97b2f5c44a68ea36ef13f622a37e37063156b.png" title=" 2: Registrar cliente exitosamente ({firstName=Mancuso, lastName=Geun, email=gf.m@gmail.com, age=21, salary=1242000, department=Insurance})" width="2560"/>
+                <img src="492793c32867859b1fce11430ce97b2f5c44a68ea36ef13f622a37e37063156b.png" title=" Given que me encuentro en &quot;https://demoqa.com/&quot;" width="2560"/>
+                <img src="492793c32867859b1fce11430ce97b2f5c44a68ea36ef13f622a37e37063156b.png" title=" Yeison opens the https://demoqa.com/" width="2560"/>
+                <img src="492793c32867859b1fce11430ce97b2f5c44a68ea36ef13f622a37e37063156b.png" title=" Given que me encuentro en &quot;https://demoqa.com/&quot; (completed)" width="2560"/>
+                <img src="492793c32867859b1fce11430ce97b2f5c44a68ea36ef13f622a37e37063156b.png" title=" When registro al cliente en la tabla
+| firstName | lastName | email | age | salary | department |
+| Mancuso | Geun | gf.m@gmail.com | 21 | 1242000 | Insurance |" width="2560"/>
+                <img src="492793c32867859b1fce11430ce97b2f5c44a68ea36ef13f622a37e37063156b.png" title=" Navega hacia la pagina de interaccion" width="2560"/>
+                <img src="492793c32867859b1fce11430ce97b2f5c44a68ea36ef13f622a37e37063156b.png" title=" Yeison clicks on Elements" width="2560"/>
+                <img src="f7fb8443c10b14d00572a964f448f6bb46f8b97194b58c200365dc710fffcf61.png" title=" Yeison clicks on Elements (completed)" width="2560"/>
+                <img src="445ef5a2f4c77db5f0bef9f154607b1e8a81b47d8818007d0677fe14e5c51e74.png" title=" Yeison clicks on Web Tables" width="2560"/>
+                <img src="c3f1c2ede090c0d80455318ca6bf7b87c0db28b4da82053daecb0bcf29df4241.png" title=" Yeison clicks on Web Tables (completed)" width="2560"/>
+                <img src="c3f1c2ede090c0d80455318ca6bf7b87c0db28b4da82053daecb0bcf29df4241.png" title=" Navega hacia la pagina de interaccion (completed)" width="2560"/>
+                <img src="c3f1c2ede090c0d80455318ca6bf7b87c0db28b4da82053daecb0bcf29df4241.png" title=" Agrega al cliente a la tabla" width="2560"/>
+                <img src="abe770521789377e8d748e94feaafc1797fb94f7b78d1f952bc1a43b2cd854db.png" title=" Yeison clicks on Button add en Web Tables" width="2560"/>
+                <img src="60590562632c26c41f6abd7eeca94ec4c0c7524993af63c18866e0bfc524f2fb.png" title=" Yeison clicks on Button add en Web Tables (completed)" width="2560"/>
+                <img src="cbe7219080338d1905d882af6203fb24e1eed8e1ca798ca9a45620ade6b5d5bb.png" title=" Yeison enters 'Mancuso' into input firstname del formulario" width="2560"/>
+                <img src="d12202ccd0681274ca107637f0eb4a3a71569d46cc66d69e57cd1e6f0575b9b5.png" title=" Yeison enters 'Mancuso' into input firstname del formulario (completed)" width="2560"/>
+                <img src="d12202ccd0681274ca107637f0eb4a3a71569d46cc66d69e57cd1e6f0575b9b5.png" title=" Yeison enters 'Geun' into input lastname del formulario" width="2560"/>
+                <img src="af40ee3bbdc75a2870eda8b0aae7f2889c87560e9d4ed2a7552687739f68ab18.png" title=" Yeison enters 'Geun' into input lastname del formulario (completed)" width="2560"/>
+                <img src="af40ee3bbdc75a2870eda8b0aae7f2889c87560e9d4ed2a7552687739f68ab18.png" title=" Yeison enters 'gf.m@gmail.com' into input emnail del formulario" width="2560"/>
+                <img src="46b42682bcb1a066e046d911046469d9e5edff4ad3ff48c5b97923d37d5f3ef3.png" title=" Yeison enters 'gf.m@gmail.com' into input emnail del formulario (completed)" width="2560"/>
+                <img src="46b42682bcb1a066e046d911046469d9e5edff4ad3ff48c5b97923d37d5f3ef3.png" title=" Yeison enters '21' into input age del formulario" width="2560"/>
+                <img src="d1db73892b6b280e138e36aa8f882f756c8c04e970bf3419917960b253f76900.png" title=" Yeison enters '21' into input age del formulario (completed)" width="2560"/>
+                <img src="d1db73892b6b280e138e36aa8f882f756c8c04e970bf3419917960b253f76900.png" title=" Yeison enters '1242000' into input salary del formulario" width="2560"/>
+                <img src="de98fc2205e02f9ebbead80565b14fffdd61b025c95d1c284407b40d7192ef61.png" title=" Yeison enters '1242000' into input salary del formulario (completed)" width="2560"/>
+                <img src="de98fc2205e02f9ebbead80565b14fffdd61b025c95d1c284407b40d7192ef61.png" title=" Yeison enters 'Insurance' into input department del formulario" width="2560"/>
+                <img src="1938a6ddcde62eec09c5c2ead97a7951d5b5c0c9c475187e9138003e1a07eb1a.png" title=" Yeison enters 'Insurance' into input department del formulario (completed)" width="2560"/>
+                <img src="1938a6ddcde62eec09c5c2ead97a7951d5b5c0c9c475187e9138003e1a07eb1a.png" title=" Yeison clicks on Button submit en Web Tables" width="2560"/>
+                <img src="34c37ff2ec52a95cc962250050b3c89254982404d4b077cc65a463df8d6a8062.png" title=" Yeison clicks on Button submit en Web Tables (completed)" width="2560"/>
+                <img src="34c37ff2ec52a95cc962250050b3c89254982404d4b077cc65a463df8d6a8062.png" title=" Agrega al cliente a la tabla (completed)" width="2560"/>
+                <img src="34c37ff2ec52a95cc962250050b3c89254982404d4b077cc65a463df8d6a8062.png" title=" When registro al cliente en la tabla
+| firstName | lastName | email | age | salary | department |
+| Mancuso | Geun | gf.m@gmail.com | 21 | 1242000 | Insurance | (completed)" width="2560"/>
+                <img src="34c37ff2ec52a95cc962250050b3c89254982404d4b077cc65a463df8d6a8062.png" title=" Then el cliente es registrado en la tabla" width="2560"/>
+                <img src="8763b89ac04abc57e60056f9f2e04da5ce0baf465ceff4f295d1ca222f37fcfe.png" title=" Yeison should see a value that is equal to: &lt;&quot;Mancuso&quot;&gt;" width="2560"/>
+                <img src="8763b89ac04abc57e60056f9f2e04da5ce0baf465ceff4f295d1ca222f37fcfe.png" title=" Yeison should see a value that is equal to: &lt;&quot;Mancuso&quot;&gt; (completed)" width="2560"/>
+                <img src="8763b89ac04abc57e60056f9f2e04da5ce0baf465ceff4f295d1ca222f37fcfe.png" title=" Yeison should see a value that is equal to: &lt;&quot;Geun&quot;&gt;" width="2560"/>
+                <img src="8763b89ac04abc57e60056f9f2e04da5ce0baf465ceff4f295d1ca222f37fcfe.png" title=" Yeison should see a value that is equal to: &lt;&quot;Geun&quot;&gt; (completed)" width="2560"/>
+                <img src="8763b89ac04abc57e60056f9f2e04da5ce0baf465ceff4f295d1ca222f37fcfe.png" title=" Yeison should see a value that is equal to: &lt;&quot;gf.m@gmail.com&quot;&gt;" width="2560"/>
+                <img src="8763b89ac04abc57e60056f9f2e04da5ce0baf465ceff4f295d1ca222f37fcfe.png" title=" Yeison should see a value that is equal to: &lt;&quot;gf.m@gmail.com&quot;&gt; (completed)" width="2560"/>
+                <img src="8763b89ac04abc57e60056f9f2e04da5ce0baf465ceff4f295d1ca222f37fcfe.png" title=" Yeison should see a value that is equal to: &lt;&quot;21&quot;&gt;" width="2560"/>
+                <img src="8763b89ac04abc57e60056f9f2e04da5ce0baf465ceff4f295d1ca222f37fcfe.png" title=" Yeison should see a value that is equal to: &lt;&quot;21&quot;&gt; (completed)" width="2560"/>
+                <img src="8763b89ac04abc57e60056f9f2e04da5ce0baf465ceff4f295d1ca222f37fcfe.png" title=" Yeison should see a value that is equal to: &lt;&quot;1242000&quot;&gt;" width="2560"/>
+                <img src="8763b89ac04abc57e60056f9f2e04da5ce0baf465ceff4f295d1ca222f37fcfe.png" title=" Yeison should see a value that is equal to: &lt;&quot;1242000&quot;&gt; (completed)" width="2560"/>
+                <img src="8763b89ac04abc57e60056f9f2e04da5ce0baf465ceff4f295d1ca222f37fcfe.png" title=" Yeison should see a value that is equal to: &lt;&quot;Insurance&quot;&gt;" width="2560"/>
+                <img src="8763b89ac04abc57e60056f9f2e04da5ce0baf465ceff4f295d1ca222f37fcfe.png" title=" Yeison should see a value that is equal to: &lt;&quot;Insurance&quot;&gt; (completed)" width="2560"/>
+                <img src="8763b89ac04abc57e60056f9f2e04da5ce0baf465ceff4f295d1ca222f37fcfe.png" title=" Then el cliente es registrado en la tabla (completed)" width="2560"/>
+                <img src="8763b89ac04abc57e60056f9f2e04da5ce0baf465ceff4f295d1ca222f37fcfe.png" title=" 2: Registrar cliente exitosamente ({firstName=Mancuso, lastName=Geun, email=gf.m@gmail.com, age=21, salary=1242000, department=Insurance}) (completed): <span class='success-color'>SUCCESS</span>" width="2560"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.0.1</span>
+</div>
+</body>
+</html>
